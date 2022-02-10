@@ -1,40 +1,22 @@
+
 package com.assignment;
 
-
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String args[]){
-        int checkNum;
-        int x;
-        int y;
-        int r;
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number to check for palindrome: ");
-        checkNum = sc.nextInt();
-        x = checkNum;
-        for (y=0; checkNum>0; checkNum/=10)
+//Java Program to Print the Inverted Right Triangle Star Pattern
+import java.util.*;
+public class Main
+{
+    public static void main(String []args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of rows: ");
+        int n=sc.nextInt();
+        for(int i=n;i>0;i--)
         {
-            r = checkNum%10;
-            y = (y*10)+r;
-
-
+            for(int j=0;j<i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        if (y==x)
-            System.out.println(x + " is a Palindrome number");
-        else
-            System.out.println(x + " is not a Palindrome number");
-
-
-
-
-
-
     }
-
 }
-
-
-
-
-
